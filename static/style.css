@@ -1,0 +1,125 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Background */
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+}
+
+/* Main container with glassmorphism */
+.weather-container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    color: #fff;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Form styling */
+.weather-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.weather-form input[type="text"] {
+    padding: 12px;
+    width: 65%;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.weather-form input::placeholder {
+    color: #ddd;
+}
+
+.weather-form input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.weather-form button {
+    padding: 12px 18px;
+    font-size: 15px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.weather-form button:hover {
+    background: #ff5722;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Weather result */
+.weather-result {
+    margin-top: 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.weather-result img {
+    width: 90px;
+    height: 90px;
+    margin: 10px 0;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.4));
+}
+
+.desc {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.temp {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.minmax {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Error message */
+.error {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
